@@ -150,7 +150,7 @@ with st.sidebar:
     ss.temperature = temperature
     default_temperature = temperature
 
-    response_lang = st.sidebar.selectbox("Response Language", options=["English", "Tamil", "Hindi", "French", "German"], value=response_lang)
+    response_lang = st.sidebar.selectbox("Response Language", options=["English", "Tamil", "Hindi", "French", "German"])
     ss.response_lang = response_lang
 
 for message in ss.messages:
