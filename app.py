@@ -142,19 +142,18 @@ if "indexed" in ss:
             st.markdown(query)
         ss.messages.append({"role": "human", "content": query})
 
-        st.write(query)
         references = index_to_response(query)
-        if references:
-            prompt = f"""You are a Question Answering assistant chatbot. Here are some relevant sections from the documents for your reference:\n\n"""
-            for idx, reference in enumerate(references, 1):
-                prompt += f"""Reference {idx}: {reference.get_content()}\n\n"""
-            prompt += f"""\n\n**Instructions to Responding:** 1) Never respond with words like snippet, reference, section, or any words related to provided context. 2) Use bullet points when necessary. 3) Use latex formula when necessary. 4) Always provide a response in {response_lang} language with tone {bot_tone}."""
-            prompt += f"""\n\n\nAnswer for {query} based on the references and instructions given above."""
-            
-            st.write(prompt)
-            llm = Gemini(model="models/gemini-2.0-flash", temperature=temperature, max_tokens=max_tokens, top_p=top_p)
-            response = llm.complete(prompt)
 
-            with st.chat_message("ai", avatar=bot_avator_filepath):
-                st.markdown(response.text)
-            ss.messages.append({"role": "ai", "content": response.text, "avatar": bot_avator_filepath})
+        prompt = f"""You are a Question Answering assistant chatbot. Here are some relevant sections from the documents for your reference:\n\n"""
+        for idx, reference in enumerate(references, 1):
+            prompt += f"""Reference {idx}: {reference.get_content()}\n\n"""
+        prompt += f"""\n\n**Instructions to Responding:** 1) Never respond with words like snippet, reference, section, or any words related to provided context. 2) Use bullet points when necessary. 3) Use latex formula when necessary. 4) Always provide a response in {response_lang} language with tone {bot_tone}."""
+        prompt += f"""\n\n\nAnswer for {query} based on the references and instructions given above."""
+        
+        st.write(prompt)
+        llm = Gemini(model="models/gemini-2.0-flash", temperature=temperature, max_tokens=max_tokens, top_p=top_p)
+        response = llm.complete(prompt)
+
+        with st.chat_message("ai", avatar=bot_avator_filepath):
+            st.markdown(response.text)
+        ss.messages.append({"role": "ai", "content": response.text, "avatar": bot_avator_filepath})
