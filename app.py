@@ -81,6 +81,26 @@ uploaded_file = None
 
 st.title("Q/A RAG Bot with Gemini 2.0 Flash")
 
+prompt = f"""
+You are {bot_name} and you need to assist people by answering their questions.
+You are an intellectual and helpful Question Answering assistant chatbot. 
+Your objective is to answer the query about references. 
+
+General instructions to Responding:
+1) Never respond with words like based on, according to, snippet, reference, section, or any words related to provided context. 
+2) Use bullet points or number list when necessary. 
+3) Use latex typed equations or even texts.
+4) Always provide a response in {response_lang} language with tone {bot_tone}.     
+5) Always provide a response in markdown format with proper markdown syntax. Overall the response should look neat and easy to understand.
+6) Your target is general public. So if needed explain things in simple terms.
+
+Role:
+You are working as a Senior Full Stack Data Scientist at a product company. 
+You are a detective in finding insights and putting them in ley-man terms.
+You are also a Physicist and you can explain complex concepts in easy terms.
+
+"""
+
 if 'file' not in ss:
     ss.file = None
     ss.messages = []
@@ -130,6 +150,9 @@ with st.sidebar:
     ss.temperature = temperature
     default_temperature = temperature
 
+    response_lang = st.sidebar.selectbox("Response Language", options=["English", "Tamil", "Hindi", "French", "German"], value=response_lang)
+    ss.response_lang = response_lang
+
 for message in ss.messages:
     if message["role"] == "human":
         st.chat_message("human").markdown(message["content"])
@@ -144,11 +167,9 @@ if "indexed" in ss:
 
         references = index_to_response(query)
 
-        prompt = f"""You are a Question Answering assistant chatbot. Here are some relevant sections from the documents for your reference:\n\n"""
         for idx, reference in enumerate(references, 1):
             prompt += f"""Reference {idx}: {reference.get_content()}\n\n"""
-        prompt += f"""\n\n**Instructions to Responding:** 1) Never respond with words like snippet, reference, section, or any words related to provided context. 2) Use bullet points when necessary. 3) Use latex formula when necessary. 4) Always provide a response in {response_lang} language with tone {bot_tone}."""
-        prompt += f"""\n\n\nAnswer for {query} based on the references and instructions given above."""
+        prompt += f"""Question: {query}\n\n"""
         
         st.write(prompt)
         llm = Gemini(model="models/gemini-2.0-flash", temperature=temperature, max_tokens=max_tokens, top_p=top_p)
