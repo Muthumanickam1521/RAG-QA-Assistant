@@ -13,8 +13,6 @@ from llama_index.embeddings.gemini import GeminiEmbedding
 from llama_index.core.node_parser import SemanticSplitterNodeParser
 from llama_index.core.ingestion import IngestionPipeline
 
-import chromadb
-from chromadb.config import Settings
 from pinecone import Pinecone
 
 import streamlit as st
