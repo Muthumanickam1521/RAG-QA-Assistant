@@ -1,6 +1,7 @@
 from indexer import doc_to_index, delete_index
 from retriever import index_to_response
 
+import time
 import os
 from PyPDF2 import PdfReader
 import numpy as np
@@ -176,15 +177,11 @@ if "indexed" in ss:
         llm = Gemini(model="models/gemini-2.0-flash", temperature=temperature, max_tokens=max_tokens, top_p=top_p)
         response = llm.complete(prompt)
 
-        #
-        import time
-        placeholder = st.empty() 
-        response_text = " "
-        for word in response.text.split(" "):
-            response_text += word + " "
-            placeholder.markdown(response_text)  
-            time.sleep(0.15) 
-
         with st.chat_message("ai", avatar=bot_avator_filepath):
-            st.markdown(response.text)
-        ss.messages.append({"role": "ai", "content": response.text, "avatar": bot_avator_filepath})
+            placeholder = st.empty() 
+            response_text = " "
+            for word in response.text.split(" "):
+                response_text += word + " "
+                placeholder.markdown(response_text)  
+                time.sleep(0.15) 
+        ss.messages.append({"role": "ai", "content": response_text, "avatar": bot_avator_filepath})
