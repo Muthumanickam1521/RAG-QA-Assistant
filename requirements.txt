@@ -2,7 +2,10 @@ docx
 llama_index
 llama-index-core
 llama-index-vector-stores-pinecone
+llama-index-embeddings-huggingface
+llama_index-embeddings-gemini
 llama-index-llms-gemini
+google-generativeai 
 streamlit
 pinecone-client
 numpy
