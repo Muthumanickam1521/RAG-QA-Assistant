@@ -9,8 +9,6 @@ from llama_index.embeddings.gemini import GeminiEmbedding
 from llama_index.core.node_parser import SemanticSplitterNodeParser
 from llama_index.core.ingestion import IngestionPipeline
 
-import chromadb
-from chromadb.config import Settings
 from pinecone import Pinecone
 
 GOOGLE_API_KEY = "AIzaSyCcz5K_IEIq_cW_2Y3hagkkDqr_3cPIpx8" 
@@ -35,7 +33,6 @@ def delete_index(index_name="rag-app"):
 def doc_to_index(Documents):
     model_name = "models/embedding-001"
     embed_model = GeminiEmbedding(model_name=model_name, api_key=GOOGLE_API_KEY)
-    #HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
     #initiap indexe &vectorstore
     pc = Pinecone(api_key=PINECONE_API_KEY)
