@@ -2,6 +2,9 @@ docx
 llama_index
 llama-index-core
 llama-index-vector-stores-pinecone
+llama-index-llms-gemini
+streamlit
+pinecone-client
 numpy
 pandas
 pinecone
