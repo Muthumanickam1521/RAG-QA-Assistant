@@ -91,7 +91,7 @@ if len(ss.messages) == 0:
     bot_avator_filepath = os.path.join(os.getcwd(), "asset", "avatar.jpg")
     ss.messages.append({
         "role": "ai", 
-        "content": "Hi! I am Smart Bot. I'm excited to answer your questions about a file. Feel free to upload one.", 
+        "content": "Hi!\n\n I am Smart Bot. I'm excited to answer your questions about a file. Feel free to upload one.", 
         "avatar": bot_avator_filepath
     })
 
@@ -146,6 +146,7 @@ General instructions to Responding:
 4) Always provide a response in {response_lang} language with tone {bot_tone}.     
 5) Always provide a response in markdown format with proper markdown syntax. Overall the response should look neat and easy to understand.
 6) Your target is general public. So if needed explain things in simple terms.
+7) Respond in less words unless it's absolute necessary or it would be conveying good.
 
 Role:
 You are working as a Senior Full Stack Data Scientist at a product company. 
@@ -172,9 +173,17 @@ if "indexed" in ss:
             prompt += f"""Reference {idx}: {reference.get_content()}\n\n"""
         prompt += f"""Question: {query}\n\n"""
         
-        st.write(prompt)
         llm = Gemini(model="models/gemini-2.0-flash", temperature=temperature, max_tokens=max_tokens, top_p=top_p)
         response = llm.complete(prompt)
+
+        #
+        import time
+        placeholder = st.empty() 
+        response_text = " "
+        for word in response.text.split(" "):
+            response_text += word + " "
+            placeholder.markdown(response_text)  
+            time.sleep(0.15) 
 
         with st.chat_message("ai", avatar=bot_avator_filepath):
             st.markdown(response.text)
