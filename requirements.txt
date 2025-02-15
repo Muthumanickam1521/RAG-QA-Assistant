@@ -4,7 +4,6 @@ streamlit
 pinecone-client
 numpy
 pandas
-pinecone
 PyPDF2
 streamlit
 llama_index
