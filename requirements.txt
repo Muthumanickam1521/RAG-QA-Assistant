@@ -1,4 +1,4 @@
-docx
+python-docx
 google-generativeai 
 streamlit
 pinecone-client
