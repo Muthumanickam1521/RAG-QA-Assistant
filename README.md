@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # RAG QA Assitant with LlamaIndex and Gemini 2.0 Flash
 
 ! [Demo]()
