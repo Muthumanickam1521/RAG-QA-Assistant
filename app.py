@@ -80,7 +80,7 @@ default_temperature = 0.4
 documents = None
 uploaded_file = None
 
-st.title("Q/A RAG Bot with Gemini 2.0 Flash")
+st.title("RAG QA Assistant with LlamaIndex and Gemini 2.0 Flash")
 
 if 'file' not in ss:
     ss.file = None
