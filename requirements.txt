@@ -1,7 +1,7 @@
 python-docx
 google-generativeai 
 streamlit
-pinecone-client
+pinecone
 numpy
 pandas
 PyPDF2
