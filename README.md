@@ -2,7 +2,7 @@
 
 Live demo: [Streamlit app](https://rag-app-gemini2-flash.streamlit.app/) 
 
-![Alt text]("asset/demo_app.png")
+![Alt text](asset/demo_app.png)
 
 ## Motivation
 
