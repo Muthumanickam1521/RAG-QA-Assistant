@@ -1,12 +1,12 @@
 # RAG QA Assistant with LlamaIndex and Gemini 2.0 Flash
 
-![Demo]([https://rag-app-gemini2-flash.streamlit.app/]) 
+Live demo: [Streamlit app](https://rag-app-gemini2-flash.streamlit.app/) 
 
 ## Motivation
 
-Have you ever struggled to understand the breakdown of your credit card bill? I did too! I used to create separate Excel sheets just to verify charges. I wished I had a CA friend to simplify my bills, but I don't. That's why I created this Agentic RAG system (ARAG).
+Have you ever struggled to understand the breakdown of your credit card bill? I did too! I used to create separate Excel sheets just to verify charges. I wished I had a CA friend to simplify my bills, but I don't. That's why I created this RAG application.
 
-In simple terms, ARAG allows you to upload a document (in various formats) and ask questions about it. The system parses the document, retrieves relevant information, and provides clear, concise answers.
+In simple terms, RAG allows you to upload a document (in various formats) and ask questions about it. The system parses the document, retrieves relevant information, and provides clear, concise answers.
 
 ## Have a Question About Your File?
 
@@ -17,7 +17,7 @@ To use the application, you'll need:
 
 **Instructions:**
 
-1.  Access the Streamlit app [Insert Streamlit App Link Here].
+1.  Access the Streamlit app.
 2.  Upload your file (please wait a few seconds for processing).
 3.  Ask your question!
 
@@ -46,7 +46,6 @@ I plan to address these limitations and develop a more robust RAG application wi
 
 I'm actively seeking collaboration opportunities, contributing to **open-source** projects, and available for freelance work. If you have any projects where I can contribute, please reach out to [pearlrubymv@gmail.com](mailto:pearlrubymv@gmail.com). Let's build something great together!
 
-## Contact
 
 Phone: +91 9500427308   
 LinkedIn: [Link to page](https://www.linkedin.com/in/muthumanickamv/)
