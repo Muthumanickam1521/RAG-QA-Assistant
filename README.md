@@ -1,6 +1,6 @@
 # RAG QA Assistant with LlamaIndex and Gemini 2.0 Flash
 
-![Demo](about:sanitized)  *(Replace with a link to a demo image or GIF)*
+![Demo]([https://rag-app-gemini2-flash.streamlit.app/]) 
 
 ## Motivation
 
