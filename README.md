@@ -4,6 +4,9 @@ Live demo: [Streamlit app](https://rag-app-gemini2-flash.streamlit.app/)
 
 ![Alt text](asset/demo_app.png)
 
+## Workflow
+![Alt text](asset/flow.png)
+
 ## Motivation
 
 Have you ever struggled to understand the breakdown of your credit card bill? I did too! I used to create separate Excel sheets just to verify charges. I wished I had a CA friend to simplify my bills, but I don't. That's why I created this RAG application.
