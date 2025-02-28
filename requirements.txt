@@ -1,7 +1,6 @@
 python-docx
 google-generativeai 
 streamlit
-pinecone
 numpy
 pandas
 PyPDF2
@@ -13,3 +12,4 @@ llama-index-embeddings-huggingface
 llama_index-embeddings-gemini
 llama-index-llms-gemini
 llama-index-readers-web
+pinecone
