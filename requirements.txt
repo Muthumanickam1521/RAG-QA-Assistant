@@ -13,3 +13,4 @@ llama_index-embeddings-gemini
 llama-index-llms-gemini
 llama-index-readers-web
 pinecone
+torch==2.5.1

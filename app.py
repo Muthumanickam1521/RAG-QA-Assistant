@@ -1,8 +1,9 @@
 from indexer import doc_to_index, delete_index
 from retriever import index_to_response
 
-import time
 import os
+os.environ["TIKTOKEN_CACHE_DIR"] = "/tmp/tiktoken_cache"
+import time
 from PyPDF2 import PdfReader
 import numpy as np
 import pandas as pd
