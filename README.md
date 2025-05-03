@@ -28,10 +28,20 @@ To use the application, you'll need:
 
 ## Installation
 In case, Streamlit does not work like as expected, we can run this project in our local. 
-1. Open a linux terminal. Run the command
-   """python
-   git clone 
-   """
+1. Open a linux terminal. Run the command to set working python environment:
+   ```bash
+   git clone https://github.com/Muthumanickam1521/RAG-QA-Assistant.git
+   cd RAG-QA-Assistant
+   python -m venv rag-env
+   source rag-env/bin/activate
+   pip install -r requirements.txt
+   ```
+2. Start the streamlit local host server with default end-point by executing the following piece of code:
+   ```bash
+   streamlit run app.py
+   ```
+3. Open end-point url in google chrome browser to query about a document.
+
 
 ## Limitations
 
