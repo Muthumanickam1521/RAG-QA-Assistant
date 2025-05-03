@@ -26,6 +26,13 @@ To use the application, you'll need:
 2.  Upload your file (please wait a few seconds for processing).
 3.  Ask your question!
 
+## Installation
+In case, Streamlit does not work like as expected, we can run this project in our local. 
+1. Open a linux terminal. Run the command
+   """python
+   git clone 
+   """
+
 ## Limitations
 
 Like any project, this RAG application has a few limitations:
