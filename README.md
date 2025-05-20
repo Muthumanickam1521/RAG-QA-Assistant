@@ -1,8 +1,8 @@
 # RAG QA Assistant with LlamaIndex and Gemini 2.0 Flash
 
-Live demo: [Streamlit app](https://rag-app-gemini2-flash.streamlit.app/)  \
-Blog: [Medium site](https://medium.com/data-and-beyond/from-data-chaos-to-calm-a-rag-qa-assistant-with-llamaindex-gemini-2-0-flash-ac0a709ba2eb)
-
+**Live demo**: [Streamlit app](https://rag-app-gemini2-flash.streamlit.app/)  \
+**Blog**: [Medium site](https://medium.com/data-and-beyond/from-data-chaos-to-calm-a-rag-qa-assistant-with-llamaindex-gemini-2-0-flash-ac0a709ba2eb)
+**Portfolio**: https://portfolio-pearlrubymv.super.site/
 ![Alt text](asset/demo_app.png)
 
 ## Workflow
